@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 * {
   margin: 0px;
 }
@@ -6,12 +7,14 @@ body {
   background-color: #FAF6F0;
   width: 100%;
   height: 100%;
-  font-family: bely-display;
+  font-family: "Oswald", sans-serif;
 }
 
 header {
   margin: 0;
   display: flex;
+  padding: 20px 25px;
+  height: 117px;
 }
 header .logo {
   max-width: 250px;
@@ -21,21 +24,158 @@ header .logo {
 header .logo .mainlogo {
   max-width: 100%;
   height: auto;
+  background-color: #FAF6F0;
 }
 header #menu {
   display: flex;
-  width: 70%;
+  width: 100%;
+  padding-left: 0;
 }
 header #menu li {
-  color: red;
+  color: #212121;
   margin: auto;
   list-style: none;
+  font-weight: 400;
+  padding: 20px 0px;
 }
 header #menu li .subUl {
   display: none;
 }
+header #menu li a {
+  color: inherit;
+  text-decoration: inherit;
+}
+header #menu li:hover {
+  color: #ff7b69;
+  position: relative;
+}
+header #menu li:hover .subUl {
+  color: #212121;
+  display: block;
+  position: absolute;
+  left: -40px;
+  width: 300px;
+  top: 60px;
+}
+header #menu li:hover .subUl li {
+  border-top: 1px solid rgba(255, 255, 255, 0.637);
+  padding: 10px;
+  background-color: #ffbdb4;
+}
 header .sideMenu {
-  width: 10%;
+  width: 84px;
+  margin: auto;
+}
+header .sideMenu img {
+  width: 23px;
+  height: 23px;
+}
+header .sideMenu img:hover {
+  -webkit-filter: opacity(0.5) drop-shadow(0 0 0 #ff1e00);
+  filter: opacity(0.5) drop-shadow(0 0 0 #e4af04);
+}
+header .sideMenu .listIcon {
+  display: none;
+}
+header .hideMenu {
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 1000px;
+  background-color: chocolate;
+  z-index: 1;
+  transition: all 0.35s;
+  padding-top: 40px;
+}
+header .hideMenu .clear {
+  display: block;
+  margin-right: 0;
+  position: absolute;
+  right: 50px;
+  font-size: 3em;
+  top: 9px;
+}
+header .hideMenu li {
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: 400;
+  list-style: none;
+  margin-top: 10px;
+}
+header .hideMenu li a {
+  color: inherit;
+  text-decoration: inherit;
+}
+header .on {
+  display: block;
+  height: 100%;
+  left: 0;
+}
+
+.main {
+  display: flex;
+}
+.main .mainimg {
+  margin-left: auto;
+  padding: 0;
+}
+.main .mainimg img {
+  background-image: url(https://snugdesigns.co.uk/wp-content/uploads/2019/08/screencapture-shine-snugdesigns-co-uk-2019-08-17-23_08_53-copy.png);
+  width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  -webkit-transition: all 5s ease-in-out;
+  -moz-transition: all 5s ease-in-out;
+  -ms-transition: all 5s ease-in-out;
+  -o-transition: all 5s ease-in-out;
+  transition: all 5s ease-in-out;
+  line-height: 0;
+  display: block;
+}
+.main .mainimg img:hover {
+  background-position: 100% 100%, center top;
+}
+.main .mainContent {
+  max-width: 630px;
+  margin-right: auto;
+}
+
+@media (max-width: 770px) {
+  header {
+    height: 81.5px;
+  }
+  header .logo {
+    width: 170px;
+  }
+  header #menu {
+    display: none;
+    color: brown;
+  }
+  header .sideMenu {
+    margin-right: 0px;
+  }
+  header .sideMenu .listIcon {
+    display: inline-block;
+    float: right;
+    margin-left: 6px;
+  }
+  header .hideMenu {
+    display: block;
+  }
+
+  .main {
+    display: block;
+  }
+}
+@media (max-width: 340px) {
+  header {
+    display: block;
+  }
+  header .sideMenu {
+    float: left;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
