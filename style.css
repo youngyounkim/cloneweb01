@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@500&display=swap");
 * {
   margin: 0px;
 }
@@ -12,6 +14,7 @@ body {
 
 header {
   margin: 0;
+  margin-bottom: 70px;
   display: flex;
   padding: 20px 25px;
   height: 117px;
@@ -113,11 +116,49 @@ header .on {
   left: 0;
 }
 
+.sideLeft {
+  position: fixed;
+  left: 0;
+  transform: rotate(270deg);
+  transform-origin: top left;
+  top: 60%;
+  padding: 16px 20px;
+  background: #EF962B;
+  width: 250px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 2.4px;
+  font-weight: 400;
+}
+
+.sideRigth {
+  position: fixed;
+  right: 0;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  transform-origin: top right;
+  top: 60%;
+  padding: 16px 20px;
+  background: #EF9F9A;
+  width: 250px;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2.4px;
+  font-weight: 400;
+}
+
 .main {
   display: flex;
+  padding: 0 5%;
 }
 .main .mainimg {
   margin-left: auto;
+  margin-right: 2%;
   padding: 0;
 }
 .main .mainimg img {
@@ -137,9 +178,129 @@ header .on {
 .main .mainimg img:hover {
   background-position: 100% 100%, center top;
 }
+.main .mainimg p {
+  margin-top: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 2rem;
+  letter-spacing: 2.4px;
+}
 .main .mainContent {
-  max-width: 630px;
+  width: 48%;
   margin-right: auto;
+  margin-left: 2%;
+}
+.main .mainContent h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 5rem;
+  line-height: 72px;
+  font-weight: 300;
+}
+.main .mainContent .price {
+  margin: 36px 0;
+  font-size: 2.25em;
+  color: #212121;
+}
+.main .mainContent p {
+  line-height: 29px;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+}
+.main .mainContent b {
+  font-family: "Playfair Display", serif;
+}
+.main .mainContent h2 {
+  margin: 20px 0 30px 0;
+  padding: 0 0 8px;
+  line-height: 42px;
+}
+.main .mainContent a {
+  color: inherit;
+  text-decoration: inherit;
+  box-shadow: inset--3px 0 #EF9F9A;
+  -webkit-box-shadow: inset 0 -3px 0 #EF9F9A;
+  font-weight: 400;
+}
+.main .mainContent .btn {
+  display: flex;
+}
+.main .mainContent .btn button {
+  display: block;
+  width: 48%;
+  border: 0;
+  font-size: 1rem;
+  padding: 20px;
+  color: #ffffff;
+  font-weight: 400;
+  line-height: 1em;
+  transition: box-shadow 0.3s linear;
+  -webkit-transition: box-shadow 0.3s linear;
+}
+.main .mainContent .btn .demo {
+  background-color: #EF962B;
+  margin-right: 4%;
+}
+.main .mainContent .btn .add {
+  background-color: #EF9F9A;
+}
+.main .mainContent .btn .demo:hover {
+  box-shadow: 5px 5px #EF9F9A;
+}
+.main .mainContent .btn .add:hover {
+  box-shadow: 5px 5px #EF962B;
+}
+
+.howItWorks {
+  text-align: center;
+  font-size: 3.75rem;
+  font-family: "Playfair Display", serif;
+  margin-top: 60px;
+  margin-bottom: 110px;
+}
+
+.howToWorks {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 30% 30% 30%;
+}
+.howToWorks .works {
+  background: #ffffff;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  margin: 0 5%;
+}
+.howToWorks .works .num {
+  height: 100px;
+  max-width: 100px;
+  min-width: 100px;
+  border-radius: 50%;
+  margin: -78px auto 0;
+  position: relative;
+  background: #EF9F9A;
+}
+.howToWorks .works .num p {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  font-family: "Playfair Display", serif;
+  font-size: 3.75rem;
+  color: #ffffff;
+}
+.howToWorks .works div {
+  font-family: "Open Sans", sans-serif;
+}
+.howToWorks .works div h3 {
+  text-transform: uppercase;
+  font-size: 2.25em;
+  font-weight: 300;
+  margin: 32px 0;
+}
+.howToWorks .works div .worksContent {
+  margin-top: 22px;
+  font-size: 1.375rem;
 }
 
 @media (max-width: 770px) {
@@ -165,8 +326,36 @@ header .on {
     display: block;
   }
 
+  .sideLeft {
+    display: none;
+  }
+
+  .sideRigth {
+    display: none;
+  }
+
   .main {
     display: block;
+  }
+  .main .mainContent {
+    width: 100%;
+  }
+  .main .mainContent .btn {
+    display: block;
+  }
+  .main .mainContent .btn .demo {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .main .mainContent .btn .add {
+    width: 100%;
+  }
+
+  .howToWorks {
+    display: inline;
+  }
+  .howToWorks .works {
+    margin-bottom: 80px;
   }
 }
 @media (max-width: 340px) {
